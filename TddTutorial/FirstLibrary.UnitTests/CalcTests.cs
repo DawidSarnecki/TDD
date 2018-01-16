@@ -24,8 +24,8 @@ namespace FirstLibrary.UnitTests
 
         [DataTestMethod]
         [DataRow(5,- 6, -1)]
-        [DataRow(-20, 20, 5)]
-        [DataRow(0, 0, 1)]
+        [DataRow(-20, 20, 0)]
+        [DataRow(0, 0, 0)]
         public void AddsTwoNumbers_CalculatedUsingDataRow(int a, int b, int result)
         {
             var calc = new Calc();
