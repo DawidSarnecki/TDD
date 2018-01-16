@@ -7,19 +7,26 @@ namespace FirstLibrary.UnitTests
     [TestClass]
     public class CalcTests
     {
+        private Calc _calc;
+        
+        [TestInitialize]
+        public void Setup()
+        {
+            // arange - using TestInitialize atribute Setup() is called once before test methods.
+            _calc = new Calc();
+        }
+
         [TestMethod]
         public void AddsTwoNumbers_Calculated()
         {
-            // arange
-            var calc = new Calc();
             // act
-            int result = calc.Add(2, 2);
+            int result = _calc.Add(2, 2);
             // assert
             Assert.AreEqual(4, result);
 
             // the same shortly
-            Assert.AreEqual(-1, calc.Add(5, -6));
-            Assert.AreEqual(0, calc.Add(-20, 20));
+            Assert.AreEqual(-1, _calc.Add(5, -6));
+            Assert.AreEqual(0, _calc.Add(-20, 20));
         }
 
         [DataTestMethod]
@@ -28,8 +35,7 @@ namespace FirstLibrary.UnitTests
         [DataRow(0, 0, 0)]
         public void AddsTwoNumbers_CalculatedUsingDataRow(int a, int b, int result)
         {
-            var calc = new Calc();
-            Assert.AreEqual(result, calc.Add(a, b));
+            Assert.AreEqual(result, _calc.Add(a, b));
         }
     }
 }
