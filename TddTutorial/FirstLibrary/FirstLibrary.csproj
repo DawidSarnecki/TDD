@@ -107,6 +107,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Calc.cs" />
+    <Compile Include="IProduct.cs" />
+    <Compile Include="IProductProvider.cs" />
+    <Compile Include="ProductProvider.cs" />
+    <Compile Include="ProductValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\FirstLibrary.rd.xml" />
   </ItemGroup>
