@@ -8,11 +8,6 @@ namespace FirstLibrary
 {
     public class ProductValidator
     {
-        public bool ValidateExpiredTime(IProduct product)
-        {
-            return product.ExpiredDate > DateTime.Now ? true : false;
-        }
-
         public bool ValidatePrice(IProduct product)
         {
             if (product == null)

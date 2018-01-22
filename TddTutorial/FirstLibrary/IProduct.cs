@@ -10,7 +10,7 @@ namespace FirstLibrary
     {
         string Name { get; }
         string Unit { get; }
-        DateTime ExpiredDate { get; }
+        string ExpiredDate { get; }
         decimal Price { get; }
     }
 }

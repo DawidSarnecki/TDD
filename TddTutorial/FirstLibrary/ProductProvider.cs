@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace FirstLibrary
 {
-    public class ProductProvider :IProductProvider
+    public class ProductProvider : IProductProvider
     {
         private string _providerName;
         private string _name;
         private string _unit;
-        private DateTime _expiredDate;
+        private string _expiredDate;
         private decimal _price;
 
-       
+
         public ProductProvider(IProduct product)
         {
             _providerName = "provider";
             _name = product.Name;
             _unit = product.Unit;
             _expiredDate = product.ExpiredDate;
-            //_price = product.Price;
+            _price = product.Price;
         }
 
         public string ProviderName => _providerName;
@@ -30,8 +30,8 @@ namespace FirstLibrary
 
         public string Unit => _unit;
 
-        public DateTime ExpiredDate => _expiredDate;
+        public string ExpiredDate => _expiredDate;
 
-        public decimal Price { get; }
+        public decimal Price => _price;
     }
 }
